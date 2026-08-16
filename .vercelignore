@@ -1,0 +1,12 @@
+# Local env files must never reach a deployment.
+#
+# `vercel --prod` uploads the working directory, and it does not read
+# .gitignore — so a gitignored .env still shipped, and Next.js loads .env in
+# every environment. A local-only SMS_KILL_SWITCH=true rode along that way and
+# silenced production texting until someone noticed nobody was being told they
+# were on the clock.
+#
+# Production configuration belongs in Vercel's environment variables, which
+# take precedence over these files anyway.
+.env
+.env.*

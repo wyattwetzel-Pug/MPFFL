@@ -1,0 +1,5552 @@
+{
+ "title": "MPFFL League Manual (adapted from the parent league — edit me!)",
+ "doc": {
+  "type": "doc",
+  "content": [
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 1
+    },
+    "content": [
+     {
+      "text": "I. A Brief History",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Established in 1987, the PAFFL-OG is one of the oldest and most complex fantasy football leagues. The league began when the four founding owners, all middle school students in Palo Alto, came together to draft NFL players and pit their imaginary squads against one another weekly during the NFL season. The NFL players' performances in their real games determined the points scored in the PAFFL-OG games. It was a novel concept at the time. Before ESPN, Yahoo!, and Sportsline brought the game online, and to the masses, the founding members would score games by hand; transcribing stats from the weekly sports section in USA Today. Imagine that.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The league has expanded in the nearly 40 years since its founding, and the rules have 'complified'. We've broken, lobbied, and convinced websites to change their scoring systems. We invented the 50-yarder, 3-year contracts, negative points for pick-sixes, developmental squads, the topper/holdover, the rookie tournament cage match, and much more. So. Much. More. Tens of thousands of hours of research, analysis, and debate have gone into this league over the years. The PAFFL-OG introduced most of us to the awesome power of Excel and taught us how to negotiate -- some of us more so than others. The league has called us to travel many thousands of miles to parties, weddings, family vacations, and our annual auction weekends. And, without exaggeration, we've collectively invested (not wasted) hundreds of thousands of dollars on magazines from Mac's, NFL Sunday Ticket subscriptions, website fees, league dues and side-bets.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "While much has changed in our lives, the PAFFL-OG has endured. Not the fights (emotional, verbal, and once physical), nor failed business ventures, nor even The Great Schism of 2019, has broken the bonds that back this league. Unsurprisingly, three leagues have spawned from this concept, leveraged the rules outlined herein, and been inspired by the relationships we've built over the years. These bonds make the insanity of it all seem pretty sane. Undeniable even.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 1
+    },
+    "content": [
+     {
+      "text": "II. League Structure & Play",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The PAFFL-OG consists of 16 franchises. There are no divisions, nor conferences; though there once were. Teams battle head-to-head during a 14-week regular season, hoping to advance to a 3-week, single-elimination playoff. The season culminates in the Week 17 championship known as the Jankster Cup. ← Trumpets sound and clouds part here 🎺🌤",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Weekly Starting Lineups",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each week during the NFL season, before the kickoff of the first game of the week, every franchise submits a 9-player starting lineup consisting of the following skill-position players:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "1 QB",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2 RB",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2 WR",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "1 TE",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "1 K",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "1 SuperFlex - (QB/RB/WR/TE)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "1 Flex (RB/WR/TE)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Less experienced players refer to our league structure as \"super-flex\". To us, it's just the way we've done things for decades.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Web Site Lineup Entry",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "All lineup changes, cut-downs, trades, etc. must be completed using the ",
+      "type": "text"
+     },
+     {
+      "text": "Sportsline website",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://pafflog.football.cbssports.com/home",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       }
+      ]
+     },
+     {
+      "text": ". Lineups are not valid until the web site has been updated by individual team owners before kick-off. In emergencies, information can be relayed to the commissioner via telephone, text or email message, prior to any related deadlines, and the commissioner can then enter the proper information on the site. The same holds true for trades, roster cut-downs, etc. Lineups must be submitted prior to kickoff of the respective player’s game as determined by the ",
+      "type": "text"
+     },
+     {
+      "text": "website",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://pafflog.football.cbssports.com/home",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       }
+      ]
+     },
+     {
+      "text": ". When the website locks -- lineups lock. No whining. Owners may alter their lineups after the first NFL game of the week has started, provided that the players involved in the lineup change have not yet seen their games kick off.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Improper Lineups",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "If an improper lineup is submitted, a rarity given modern website controls, the team is penalized by losing its highest scorer at a flex position (QB, RB, WR, or TE) for that week.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Lineup Integrity",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each team must submit their most competitive lineup each game. While there is always some judgment involved, egregious errors such as not subbing out players injured on a bye week will not be tolerated and will be corrected by The Commissioner. If a team leaves their 'studs' on the bench, they will be penalized. We don't have a published honor code; just don't be ",
+      "type": "text"
+     },
+     {
+      "text": "that guy",
+      "type": "text",
+      "marks": [
+       {
+        "type": "italic"
+       }
+      ]
+     },
+     {
+      "text": ". If a league member suspects foul play from another league member, he may escalate the situation to the Commissioner. The Commissioner may call for a vote, and if a simple majority of the league agrees, the Commissioner will swap in the highest-scoring bench player on behalf of the offending owner. If the same owner repeatedly fails lineup integrity checks, s/he will be kicked out of the league.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Scoring",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The real-life NFL performance of each player in the starting lineup determines that player's performance in the PAFFL-OG match-up. In weekly head-to-head competition, the team with the highest score wins. Points are awarded as follows:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "TD (rushing or receiving) – 6 points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "TD (passing) – 4 points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Rushing yards – .1 point per 1 yard",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Receiving yards – .1 point per 1 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Passing yards – .0334 point per passing yard",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Reception - .5 point per reception",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2-point conversion (throw) – 1 point",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2-point conversion (catch or run) – 2 points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "FG – 3 points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "PAT – 1 point",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Fumble Lost/Interception Thrown – minus 1 point",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Fumble Lost/Interception Thrown that is returned for a TD – minus 2 additional points (for a total of -3)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Additionally, bonus points are awarded for distance of the scoring play. See as follows:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "TD Run/Catch",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "No bonus; 6 total pts. - 19 yards or less",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+1 = 7 pts. - 20 yards to 29 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+2 = 8 pts. - 30 yards to 39 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+3 = 9 pts. - 40 yards to 49 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+4 = 10 pts. - 50 yards to 59 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+5 = 11 pts. - 60 yards to 69 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+6 = 12 pts. - 70 yards to 79 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+7 = pts. - 80 yards to 89 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+8 = 14 pts. - 90 yards to 100 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "TD Pass",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "No bonus; 4 total pts. - 29 yards or less",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+1 = 5 pts. - 30 yards to 39 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+2 = 6 pts. - 40 yards to 49 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+3 = 7 pts. - 50 yards to 59 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+4 = 8 pts. - 60 yards to 69 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+5 = 9 pts. - 70 yards to 79 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+6 = 10 pts. - 80 yards to 89 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+7 = 11 pts. - 90 yards to 100 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "FGs",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "No bonus; 3 total pts. - 39 yards or less",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+1 = 4 pts. - 40 yards to 49 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+2 = 5 pts. - 50 yards to 54 yards",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "+3 = 6 pts. - 55 yards and up",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "If a player in a starting lineup scores a TD on special teams, or on defense, six points are awarded, however the distance & yardage bonuses are not applied.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Ties",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "During the regular season, games can finish in a tie. In the event of a tie during the single-elimination playoffs, total points scored by each team’s bench players (DS and IR players not included) break the tie. In the event the game remains tied after adding the bench points, the tie will be broken by the following tie-breakers in sequence:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Regular season head-to-head record",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Regular season point differential against each other",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Total points scored during the season",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "In the event that the game still remains tied, the two owners will engage in a wrestling match governed by strict ",
+      "type": "text"
+     },
+     {
+      "text": "Greco-Roman",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://en.wikipedia.org/wiki/Greco-Roman_wrestling#The_match",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       },
+       {
+        "type": "underline"
+       }
+      ]
+     },
+     {
+      "text": " rules at a neutral location chosen by The Commissioner before the first game of the following week in the NFL schedule. The winner on the mat will survive elimination, and advance.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "League Schedule",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The PAFFL-OG schedule is composed of:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Fourteen (14) regular season games",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "A 3 week playoff cage match (for those that qualify)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "A 3 week cage-match rookie pick seeding tournament (for those that don’t qualify for (and those that are eliminated from) the playoffs). ",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The regular season schedule consists of single week head-to-head matchups. Head-to-head matchups are set by an unsupervised machine learning model targeting parity on a year over year basis. The algorithm is retrained (annually) on the 37-year dataset produced by the PAFFL-OG. Features in the model include, but are not limited to: wins, losses, points scored, power rankings, playoff wins, Jankster Cup titles, league rule violations, auction attendance, message board comments, trades completed, salary cap management, and a heuristic score of each owner’s social contribution to the league. The social contribution scores are voted on via blind-ballot at each year’s auction after the rookie draft. Or, The Commissioner will just use the RANDBETWEEN() function in Google Sheets to determine the schedule for everyone.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Playoffs",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Eight seeded teams advance to the playoffs each year. Six of the eight teams advance based on the top win-loss-tie records after the regular season. The final two playoff teams are determined by their 14-week breakdown score. This split mitigates risk from 'unfair' scheduling. If two playoff teams have the same record, seeding is determined by regular season breakdown. Breakdown score is defined as the overall record against all the other teams each week of the season; as tracked by the league website. Seeding is necessary for playoff week 2 - where the cage match winners are seeded based on regular season breakdown, and the lower seeded team plays the bye week team, and the higher seeded team plays the 2v3 game winner. ",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Week 15 / Week 1 of the Playoffs",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The top seeded team gets a bye",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The 2nd and 3rd seeded teams play head to head",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The 4th through 8th seeded teams play in a Playoff Cage Match",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The winner of the 2v3 matchup advances",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The top 2 scores from the cage match also advance to the 2nd round of the playoffs",
+              "type": "text"
+             }
+            ]
+           },
+           {
+            "type": "bulletList",
+            "content": [
+             {
+              "type": "listItem",
+              "content": [
+               {
+                "type": "paragraph",
+                "content": [
+                 {
+                  "text": "The loser of 2v3 matchup score is included in the cage match and may advance if they are one of the top two scoring teams",
+                  "type": "text"
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "listItem",
+              "content": [
+               {
+                "type": "paragraph",
+                "content": [
+                 {
+                  "text": "The bottom teams in the Playoff Cage Match are relegated to the Rookie Pick Tournament (see below)",
+                  "type": "text"
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Week 16 / Week 2 of the Playoffs - The “Semi Finals”",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The #1 overall seed plays the lowest scoring team advancing from the cage match",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The winner of the 2v3 seed match from round 1 plays the higher scoring team advancing from the cage match",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The winners of these head-to-head matchups advance to the finals",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "The losers of these head-to-head matchups are relegated to the Rookie Pick Tournament",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Week 17 / 🎺🌤 The Jankster Cup Championship 🎺🌤 - The winners of each semi-final matchup play head to head",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "image",
+    "attrs": {
+     "alt": "",
+     "src": "/manual/5dc5ce269330.png",
+     "title": null,
+     "width": null,
+     "height": null
+    }
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "The Rookie Draft “Cage-Match” Tournament",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "In an effort to make the postseason interesting for the teams that have nothing left to play for, and to deter teams from dumping talent at the trade-deadline, the PAFFL-OG hosts a two part Rookie Draft “Cage Match” Tournament.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Part 1: The Rookie Pick Cage Match",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "All non-playoff teams are seeded based on the final regular season breakdown score from the PAFFL-OG website. These teams all play in a two week “Cage Match” during Weeks 15 & 16. The points from their Week 15 & 16 starting lineups are summed and determine who plays in Week 17 for the top two Rookie Draft picks. This “Cage Match” is made equitable with handicap points that are added to the Weeks 15 & 16 summed point total:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Seeds 9 & 10 are granted 0 handicap points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Seeds 11 & 12 are granted 10 handicap points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Seeds 13 & 14 are granted 20 handicap points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Seeds 15 & 16 are granted 30 handicap points",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Part 2: The Rookie Pick Tournament",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Following the two week “Cage Match” among non-playoff teams, head-to-head matchups in week 17 determine rookie pick order for the following season.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The two teams with the highest total points (including handicap points) face off for Rookie Draft selections #1 & #2",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The next two highest scoring cage match teams face off in Week 17 for the #3 vs. #4 Rookie Draft selections",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "CAVEAT",
+              "type": "text",
+              "marks": [
+               {
+                "type": "italic"
+               }
+              ]
+             },
+             {
+              "text": " - If the worst scoring team in the regular season doesn't make either of these two rookie pick matchups, they are slotted into the matchup for the 3rd / 4th rookie picks. The goal here is to ensure that the worst team each year gets a top 4 rookie pick to help foster parity. ",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The next two highest scoring cage match teams (including handicap points) play in Week 17 for the 5th and 6th rookie picks",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The last two highest scoring team (including handicap points) play in Week 17 for the 7th and 8th rookie picks",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The four teams that lose in the Week 15 Playoff Catch Match, face off in Weeks 16 & 17 to determine Rookie Picks #9-#12.",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "Week 16 - The highest scoring team relegated from",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "Week 17 - best & two worst regular season record teams each are matched up in Week 16. The winners face off in Week 17 to determine #9, or 10 (if 16 teams) & #10, or 11, while the losers are matched up to determine #11, or 12 & #12, or 13.",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The two teams that lose in the second round of the playoffs (Week 165) will match up in Week 17 to determine Rookie Draft selections #12, or 13 & #13, or 14. ",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The final two Rookie Draft selection slots will be held by the Jankster Cup Loser (#13, or 15) & Jankster Cup Champion (#14, or 16).",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "  Pictures are probably easier:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "image",
+    "attrs": {
+     "alt": "",
+     "src": "/manual/e92728eda4e4.png",
+     "title": null,
+     "width": null,
+     "height": null
+    }
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Salary Cap",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each franchise has a primary annual salary cap of $500 that refreshes each year on the first day of the new league year; March 1st. Salary cap dollars are spent at The Auction to acquire players. Snake drafts are for sissies. Salary cap dollars may also be used to acquire free agents during the year, and buy out bunk contracts before the end of the league year. Salary cap dollars do not carry over from year to year; on the last day of the league year (last day in February), all unused salary cap dollars expire. Use them, or lose them. Or better yet, trade them. Salary cap dollars are a very tradable asset.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Team Rosters",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Owners must select their weekly starting lineup from an active roster of 20 players. In addition to the 20 active players, teams also may carry inactive players. Inactive players may be of two classes:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "(1 roster spot) Injured Reserve (IR) player, who has been declared inactive by his NFL team (can be listed as questionable or doubtful leading up to week)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "(N roster spots) Practice Squad (PS) players (see PS players, below).",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Injured Reserve Spots (IR)",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "When an NFL team declares that a player is hurt (Questionable / Doubtful / Out / IR), the PAFFL-OG team owning that player may put him on the IR spot mentioned above. When/if the player is eventually declared active by his NFL team, he becomes active once again in the PAFF-OG. The owner must return the player to his/her active roster. If necessary, the owner must announce a cut to make space for the returning player within one week of the player’s activation. If the owner fails to announce a cut before the deadline, when one is required, the IR player is automatically cut and returned to the free agent pool. Injured reserve spots are not a tradable asset. Each franchise is limited to 1 IR spot at a time.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Practice Squad (PS) Spots",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Two P.S. spots are awarded to every PAFFL-OG team each year. When a player is given the P.S. designation:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Their salary counts against the franchise’s salary cap",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The player is made inactive for the year - they cannot be used in a line-up",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The player’s contract is extended for 1 year (effectively creating a 4-year contract)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Players may be placed on the PS more than once, but they cannot be placed on the PS in consecutive seasons. The PS spot is often used for rookies or seriously injured players who likely will not contribute during the year. Players may be taken off the PS at any time during the season, however, activating these players rescinds the 4th year of the contract. If pulling a player off of the PS causes the roster to exceed the 20 active player limit, a cut must be made at the same time. PS spot designations must be declared between The Auction and the roster cut-down date. As noted, PS spot salary allocations do count against the annual salary cap. Both of a team’s annual PS spots are highly coveted tradable assets.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Long-term Contracts",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "PAFFL-OG teams may sign players to 3-year guaranteed contracts at the price the player is won for at The Auction. For example, if in 2012, Team Naughty Thoughts drafts Russell Wilson for $8, he may be put on a 3 year contract locking that price in as follows:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2012 - Wilson - $8",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2013 - Wilson - $8",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2014 - Wilson - $8",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Players on long-term contracts are not available for bidding in The Auction.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "3-year contract designations must be made between The Auction and the roster cut-down date before the first game of the season kicks-off.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each team may add as many 3-year contracts as it desires so long as it conforms with the roster limit of 20 active players.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "All 3-year contracts are fully guaranteed and count against the $500 salary cap.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "3-year contracts persist through trades.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The only ways to remove a player from a 3-year contract are:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "To have the contract expire after 3 years",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "To cut the player as per the provisions below",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "To buy-out the contract as per the provisions below",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Toppers & Holdovers (T/H, 'Toppers', 'Holdover')",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "There are three scenarios in which an owner may 'top', or 'holdover' a player on their roster:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "When an existing 3-year contract expires",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "During a rookie pick selection",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "When they've been granted a T/H asset because they didn't make the playoffs the prior year (we're all about parity in the PAFFL)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Upon the expiration of a 3-year contract, a PAFFL-OG team has a contractual right to \"top\" or \"'holdover\" the player.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "'Topping' the player means that the owner has the option to 'win' the player during the auction by adding +$1 to the final bid",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "'Holding over' the player means that the owner is securing the player 'before' the auction by signing them for one of two amounts based on position.",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "QBs may be held over for $60, or their expiring contract value +$25 - whichever is higher",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "RBs may be held over for $50, or their expiring contract value +$25 - whichever is higher",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "WRs may be held over for $40, or their expiring contract value +$20 - whichever is higher",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "TEs may be held over for $30, or their expiring contract value +$20 - whichever is higher",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "Ks may be held over for $15, or their expiring contract value +$10 - whichever is higher",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Note: the owner may, or may not choose to add the player to a 3 year contract after topping, or holding the player over. See the section below for more info",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Continuing the example from above: Team Naughty Thoughts had Russell Wilson on a $8 contract expiring in after the 2014 season. In 2015, TNT would be able to 'holdover' Russell Wilson for $60. To illustrated the other side of holdovers, let's say Horse & Pepper had Josh Allen on a robust $122 contract expiring in 2024. In 2025, TNT would have the option to 'holdover' Josh Allen for $147 ($122 + $25 > $60)",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Rookie picks are also supported by Topper / Holdover options; though they work a bit differently. When an owner selects a rookie pick during the rookie slow draft, they are automatically granted a topper / holdover right on the rookie. The holdover amount of this option works on a sliding scale by position by rookie pick number. Higher picks at premium positions cost more to hold over. Please see the table below for details. The owner may choose not to holdover the rookie for the amount listed in the table, and may instead choose to hold a 'topper' right on the player during the auction.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "[DYNAMIC TABLE: Rookie Holdover Rates]",
+      "type": "text",
+      "marks": [
+       {
+        "type": "bold"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "A Topper / Holdover is also granted to non-playoff teams to help foster parity in the league. This is a 'tradable' asset - and is highly coveted. A non-playoff owner who receives a T/H may use that T/H option on any player (who is not on a 3-year contract) who is on their roster at the end of the season. For example, let's say The BeaverCats won Trey McBride in the 2023 auction for $3, but didn't put him on a 3-year contract (oops!). If The BeaverCats didn't make the playoffs in 2023, they would have the option to use their T/H to hold McBride over for $30 in 2024 (see the positional bullet points above for the amounts). Similarly, let's say Puka Doncic won Derrick Henry at the auction for $121 before he rushed for 28 TDs in 2023. Despite this massive point total, if Puka's missed the playoffs in 2023, Puka's ownership group could choose to either hold King Henry over for $146 ($121 + $25) in 2024, or 'top' him for +$1 after the last bid in the 2024 auction.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "All toppers, and holdovers, must be declared before the auction.",
+      "type": "text"
+     },
+     {
+      "type": "hardBreak"
+     },
+     {
+      "type": "hardBreak"
+     },
+     {
+      "text": "Contractual Auto-Topper Rights",
+      "type": "text",
+      "marks": [
+       {
+        "type": "bold"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "After successive 3-year contracts (2 long term cycles), the player is automatically returned to the auction player pool.  However the owner retains a contractual restricted free agent right to retain the player for $1 more than the final auction bidding. Auto-topper rights guarantee the owner the final bid on a player at the auction. When the Auctioneer announces: “Going once, twice, sold!”, and announces the winning price, the original owner with the auto-topper right can yell “Topped” and steal the player for $1 more than the winning bid. The topper right must be exercised before the bidding starts on the next player to be auctioned. You snooze, you lose.",
+      "type": "text"
+     },
+     {
+      "type": "hardBreak"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Owners do not have to exercise topper rights. They are free to let a high-priced player go to the winning bidder. However, they cannot reset their topper right on a different player. It is spent.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Cuts & Buy-Outs",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "There are two kinds of pre-auction roster cuts:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Unconditional Cuts",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Conditional Cuts",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Unconditional Cuts",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each franchise who did not qualify for the previous year’s playoffs are granted one Unconditional Cut (it may be used on any player contract, effectively erasing all remaining payment due to that player). Unconditional Cuts are among the most tradable assets in the PAFFL-OG. They offer significant salary cap relief to owners who put players on rich contracts and then have them retire. Dear Robert Edwards, did you really have to play sand football at the Pro Bowl rookie exhibition in 1999?",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Conditional Cuts",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Every franchise is granted one Conditional Cut that may be used on a 3-year contracted player. If exercised, the player is cut from the franchise’s roster and returned to the player pool. Unlike the unconditional cut, the player's salary continues to count against the current year’s salary cap. However, the contract will not count against any future years’ salary caps. Teams who exercise a conditional cut are free to bid on that player in the general auction and may re-sign the player, at their discretion. With conditional cuts, it’s possible that two franchises are paying for the same player in the same season. That’s OK. Good for him! Conditional cuts are also a tradable asset.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Post-Auction Cuts",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "After the auction, and before the season begins, owners must cut their rosters down to meet the following requirements at the roster cut-down date:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "20 active roster spots",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2 injured reserve spot",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "2 P.S. spots (teams are granted 2 each year, but may trade for more or less)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The roster cut-down date is 5:00 PM on the Wednesday before the first game of the regular NFL season. Every franchise is responsible for announcing their final rosters (active spots, D.S. 3-year, etc.) on the website’s message board. Any team that does not communicate its final roster forfeits its right to assign 3-year and D.S. designations for that season.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "In-Season Contract Buyouts",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "In addition to voiding contracts before The Auction, PAFFL-OG teams may erase 3-year contracts by “buying out” a contract with money not spent during the annual auction. To buy out a contract, a team must use the transaction form on the website. The owner must pay the total amount of money due to a player for all of the remaining years of that player’s contract. This can be done any time before the last day of the league year (the last day in February). For example, Talk Birdie To Me signed Michael Irvin to a 3-year contract of $22 in 2006. During that season, Irvin suddenly retires to spend the rest of his life at the White House. Talk Purdy To Me’s ownership group still has $45 left over from the auction, so they buy out the remaining $44 (two more years (2007 & 2008) at $22). Salary cap dollars are not transferable from one season to another.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Trades",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Trading among teams is strongly encouraged. We pride ourselves on exotic exchanges of value.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Through any trade, exchanged players carry any pre-existing contracts with them to their new team, so long-term contracts must be strongly considered in any trade. All trades are unofficial until they are reported to the league website and transaction form and confirmed by The Commissioner. In the spirit of keeping the league a fun, social outlet between friends, team owners are expected to conduct trades in an ethical manner.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Individual team owners, as well as the league Commissioner, are expected to assess each trade, when announced. If a trade appears to be unfair, any owner may voice his/her concern within three days following the announcement of the trade. The Commissioner will mediate the dispute between the offended owner(s) and the two trading parties. If three (3) or more owners believe a trade to be grossly unfair, then it will be brought to a league vote. Should a simple majority of teams deem the trade grossly unfair (see Rule Changes and Votes, below), the trade is immediately negated and players are returned to their original teams. This shouldn’t really ever happen - again, we like the trades, the trades that go boom.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "If a trade is voided, players are returned to their teams after that week’s NFL kickoff, the commissioner or secretary will work with all teams involved in the trade to revise the lineups in the most-fair manner possible. Trades may only be blocked because they are deemed grossly unfair to one or more teams involved in the trade. Trades may not be blocked in an effort to impair another owner’s ability to improve his team.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Additionally, teams are forbidden from trading non-fantasy value for fantasy value. For example, in 1996, the PA Firefighters traded a Señor Taco Super Burrito to Horse & Pepper for Larry Centers. This trade was later voided and the PA Firefighters never received any compensation for having the trade reversed -- not even the burrito!",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Trades may be made for next year’s cash, topper/holdovers, rookie picks (even if the exact order of the rookie picks is not determined at the time of the trade) or other forms of future compensation. Frequently (as in real life sports), teams will trade future value, just prior to the trading deadline, in order to be able to better contend in the playoffs. These trades are still subject to the aforementioned “fair trade” rule.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "While we encourage trading deadline deals, to mitigate ‘Tank for Tua’ scenarios, in which ‘super’ teams are made by acquiring highly-priced stars at the trade deadline, we have instituted a rule that says no team may carry more than $600 worth of players on its roster at any point in time. Deals that lead to violations of this rule will be immediately voided.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Any “Future Value” trades are subject to the following provision: If an owner leaves the PAFFL, any previous trades where they traded future value such as cap space, rookie picks, D.S. spots or Cuts are returned to the ownerless franchise. The new franchise owner has no obligation on previous trades to existing owners. The existing team involved in the trade receives no compensation for this reversal, as it is the responsibility of both owners to trade fairly, and each individual to assess the risk profile on trades involving future value.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Once an owner has traded a player, that owner may not re-acquire that player via trade from that same owner or as part of any multi-team transaction for a minimum of eighteen months (18), unless agreed upon by a majority of the league’s owners, or the player was acquired via the annual league auction in an open bidding format (w/o particular rights). Furthermore, no team is allowed to include a “Substantial” contributor as compensation for a player now or at any later date, unless agreed upon by a majority of the league’s owners. A “Substantial” contributor is defined as a player having started more than half of the games the player has been on an active roster that season. For the purpose of transactions, a majority is defined as a majority of participating votes and/or if there are no objections, then a vote is not necessary.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Weekly Free-Agent Pick-Ups",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each week during the regular season, PAFFL-OG owners may bid on any player not on another team’s roster (AKA ‘Free Agents’) (following the first weekend of NFL games). Franchises have until Wednesday at midnight to place a bid via the league website (",
+      "type": "text"
+     },
+     {
+      "text": "Sportsline",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://pafflog.football.cbssports.com/home",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       }
+      ]
+     },
+     {
+      "text": "), the following morning, any players who have received a bid will be allocated to the highest bidder. The free agent draft preference is set each week by the league website using a formula that includes the power rankings (wins",
+      "type": "text"
+     },
+     {
+      "text": " scoring ",
+      "type": "text",
+      "marks": [
+       {
+        "type": "italic"
+       }
+      ]
+     },
+     {
+      "text": "breakdown). If two teams bid the same amount on a player, the higher preferred team (worst team in terms of rankings) will win the player. Zero dollar bids are permitted. In order to complete a FA transaction, a team must waive another player if their active roster is at twenty (20). If the active roster isn’t reduced to twenty (20) by the start of the first weekly game, the free agent is released automatically back into the free agent pool.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 1
+    },
+    "content": [
+     {
+      "text": "III. The Auction Weekend",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The auction is it. Our Bacchanalia. The closed session in which we rekindle the forge and alloy our bonds. It takes place the 1st weekend in August each year. Block your calendars; recurring-like, yes? Do it now! Kindly inform/ask your spouse. Choose your own verb on that one. All team owners are required to attend, or send a delegate. Missing The Auction is grounds for a league-wide vote on dismissal. Just saying.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The location of the auction is chosen by the 🎺🌤 Jankster Cup 🎺🌤 ",
+      "type": "text"
+     },
+     {
+      "text": "Champion",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://paffl.vercel.app/champions",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       }
+      ]
+     },
+     {
+      "text": ". We've been fortunate enough to pick players in: Vegas, Tahoe, Bend, Seattle, Santa Barbara, and Palo Alto (naturally). Where will you choose to host the auction when you hoist the cup?",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The Auction has 8 principal components spread over two weeks:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "14 days before Friday - The Rookie Slow Draft Begins",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Friday - Rookie Draft + 1st 2 Auction Rounds",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Friday - State of the Franchise Presentations",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Friday - Rules Proposals, Votes & Amendments                     ",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Friday - Deal()",
+          "type": "text"
+         },
+         {
+          "text": " where () ",
+          "type": "text",
+          "marks": [
+           {
+            "type": "italic"
+           }
+          ]
+         },
+         {
+          "text": "= tub** ",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Saturday - Auction",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Saturday - White Elephant",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Saturday - Rosterbation",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The auction also features ad hoc, interstitial events led by various league members. Examples include; golf, gambling, home made fire works displays, wiffle ball tournaments, ping pong, poker games, bike rides, hikes, frisbee golf, and long walks on the beach. Ask Weaver about the deal tub.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "1. The Rookie Slow Draft",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The Rookie Slow Draft begins two weeks before The Auction. Each team is given 12 hours to select a rookie and declare their intent to 'top', or 'holdover' the player selected. Picks are submitted on ",
+      "type": "text"
+     },
+     {
+      "text": "PAFFL.com",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "http://PAFFL.com",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       }
+      ]
+     },
+     {
+      "text": " or by texting The Commissioner. When one pick is made, the next owner is put 'on the clock' and has 12 hours to make their pick. The goal of this slow auction is to get Kama Sutra-like with many owners' favorite part of the PAFFL. Trades during the slow draft are HIGHLY encouraged. If a team pulls \"",
+      "type": "text"
+     },
+     {
+      "text": "a Brzezinski",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://www.espn.com/nfl/story/_/id/36247416/minnesota-vikings-nfl-draft-missed-pick-2003",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       }
+      ]
+     },
+     {
+      "text": "\" and does not make their selection before their 12 hour window expires, the next team in line may jump the queue and make a selection. Teams will continue to pick, in order, until the laggard makes their selection.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "2. Friday - Rookie Draft Auction",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "To get things started proper-like, on Friday night, any rookies that were 'topped' in the slow draft will be auctioned off. The owner who made the rookie pick will have the option to top the last bid for $1.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "3. Friday - State of the Franchise Presentations",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Fantasy football is good. PAFFL-OG friendships are better. On Friday night, each franchise owner will give the league an update on the state of their franchise. In the past, we’ve had poems, slide shows, Powerpoint presentations, and songs. Family, kids, work, hopes, fears -- all are welcome topics. Catch us up on the non-PAFFL-OG goings on in your life. Give us dialog fodder for the rest of the weekend.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "4. Friday - Rules Proposals, Votes & Amendments",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The PAFFL is an ever-evolving entity. It is what we make it. We're never done making it. Propose a rule change, get it ratified by at 2/3 majority vote, and become a part of the legendary folks who have made this league what it is today. Friday evening, before the Rookie Draft, any member can propose a change to this league manual and our rules. No seconds required. The proposing owner must stand and summarize their proposed rule change and rationale. The League will discuss, and The Commissioner, at his/her discretion, will call for a vote. ",
+      "type": "text"
+     },
+     {
+      "text": "Here is the change log",
+      "type": "text",
+      "marks": [
+       {
+        "type": "link",
+        "attrs": {
+         "rel": "noopener noreferrer nofollow",
+         "href": "https://docs.google.com/spreadsheets/d/1j_STM-DxKVMwNm2cfgz7vBcYnmW86QCyilqjcmHyAK0/edit#gid=0",
+         "class": "rich-text-link",
+         "title": null,
+         "target": "_blank"
+        }
+       },
+       {
+        "type": "underline"
+       }
+      ]
+     },
+     {
+      "text": ". New proposals are most often successful when they are entered in the log, and lobbied for, before the auction.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "5. Friday - Deal Tub",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Friday nights are known for great deal making. The haze of enthusiasm, camaraderie, and booze frequently leads to blockbuster deals. Late night hot tub (AKA “deal tub”) sessions, have frequently been the alchemic crucible that render championships and heartbreak. Deals get made in deal tubs. Ask Weaver; then bring your trunks! In addition to the Deal Tub, we have witnessed the Deal Deck, the Deal Path, the Deal Dock, the Deal Boat, the Deal Bike, and other Deal situations. Deal() FTW",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "6. Saturday - The Auction",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Get your bid on. Come prepared, and get it right -- you build a dynasty. Shank it, and years of shame ensue. There are no mulligans at The Auction.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Auction Order",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Before the auction, each owner draws a number from a hat to determine the auction order. Each owner announces a player to start bidding in the order drawn from the hat. We go in a circle. Like time. Clockwise.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "The Auctioneer",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "All hail. The Auctioneer:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Finds the next owner and asks for their player nomination",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Loudly repeats the player name called by the owner",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Solicits and acknowledges bids with a pointed finger, or a prop",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Calls out: “Going once, twice, sold!”",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Adjudicates disagreements on timing/bid amounts",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Keeps shit moving",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Guest Auctioneers are occasionally indulged, and enjoyed.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Bidding",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Announcing a player’s name implies an opening $1 bid",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Owners may start the bidding on a player at any price > $1",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Increasing bids must be made in a minimum of $1 over the prior bid",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Owners may not bid sequentially against themselves to inflate player prices",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "An owner may “pass” when it’s their turn, but in doing so forfeits their right to call out players in subsequent rounds",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Bidding continues for four complete rounds through the owners",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "After each section of four rounds, the league takes a ~fifteen minute break",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Bidding, and The Auction, ends when no owner announces a new player",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Each owner may purchase as many players as s/he can afford at The Auction.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Time Outs",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "During the draft, each team is allocated one five minute “time out”, to be used at any time to add up money and assess draft strategy.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "During the auction, trades may be consummated and announced during breaks. However NO time outs can be used after a player has been announced and bidding has commenced. This helps us avoid 'gaming' scenarios where teams announce bids with 'surprise' cash.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Time Outs are not a tradable asset.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Lastly, the spirit is any trade completed during a \"time out\" should have been previously discussed as a framework, time outs are not a time to start net new conversations.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Winning Bids & The Website",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Each time The Auctioneer awards a player to an owner, The Owner must call out:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Their franchise name (e.g. IMT)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The player’s name (e.g. Chris Gardocki)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The winning bid amount (e.g. A nickel)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "All player acquisitions will be captured in real-time on the website. The website is our 'source of truth'. This prevents two teams from thinking they won the same player - it's happened.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "During breaks, owners are responsible for reviewing how much money they have left to spend. If they see a discrepancy on the website they must raise it to The Commissioner immediately for adjudication. Regardless of what the website says, or anyone has in their favorite google sheet, if the owner exceeds his/her budget for any reason, it is the owner’s fault. More on this later.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Time Outs",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "During the draft, each team is allocated one five minute “time out”, to be used at any time to add up money and assess draft strategy. During the auction, trades may only be consummated and announced during breaks, any trade unannounced during a break, won’t be official until following the draft’s completion or during the next break, whichever is sooner. This helps us avoid 'gaming' scenarios where teams announce bids with 'surprise' cash. Time Outs are not tradable assets.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Fiduciary Duty",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Teams are required to keep track of their finances at all times. Owners must disclose money spent and available cap space upon request by another owner. If, during the auction, any team is found to have exceeded their salary cap, that team’s most recent player acquisitions are immediately returned to the player free agent pool, one-by-one in reverse order of acquisition, until the team is once again below the salary cap. Teams do not have the opportunity to make trades to adjust their total money spent and avoid this penalty – the punishment is immediate, and non-negotiable. Additionally, the overspending franchise is penalized $40, plus the amount overspent, against next season’s cap. For example, if, after bidding $75 to win Drew Bledsoe, The BeaverCats’ total aggregate salaries equal $512, then:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Drew Bledsoe is immediately returned to the player pool",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The BeaverCats aggregate salaries returns to $437 (leaving $63 to spend)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Bidding on Bledsoe re-opens at $1",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "Note: the BeaverCats may bid again",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The BeaverCats $500 cap for the following year is reduced by $52 ($12 overbid amount + $40 penalty) to $448",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Important:",
+      "type": "text",
+      "marks": [
+       {
+        "type": "bold"
+       }
+      ]
+     },
+     {
+      "text": " A team need not win a player to violate their fiduciary duty and become subject to the over-bidding penalty outlined above. At any time, if an owner makes a bid that exceeds his/her available salary cap, whether intentionally, or erroneously, even if s/he doesn’t win the player, s/he will forfeit the overbid amount + $40 in salary cap for the following season.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Bottom line: bring your calculator, be smart, and don’t let this fate befall your team!",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "As mentioned, salary cap dollars are a very tradable asset, which makes crisp accounting a very important skill for PAFFL-OG owners.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Opening Players Up to Competitive Bids",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "During the auction, an owner may ‘open up’ any player on contract to competitive bidding. When this happens, there are two possible outcomes:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Nobody bids on the player - Nothing happens. The player remains on the contract that was opened up.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Another owner bids on the player starting at least $1 more than the player’s current contract. In this scenario, the current owner may choose to try to win the player back, or let someone else take the player.",
+          "type": "text"
+         }
+        ]
+       },
+       {
+        "type": "bulletList",
+        "content": [
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "If another owners wins the player, the current owner is relieved of all contractual obligations for the player",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "listItem",
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "text": "If the current owner wins the player back s/he may choose, or not choose, to put the player on a new 3-year contract",
+              "type": "text"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "7. Saturday - White Elephant Player Exchange",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "On Saturday, after the auction, we exchange players white elephant style. Participation is voluntary. The White Elephant begins when each participating owner writes the name of one of their players on a piece of paper and folds it so the player’s name is not visible. Into the hat they go.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Submitted players must not be on a contract that doesn't expire at the end of the current season. No long-term transfer of contractual obligation is allowed.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The draw order is determined by the number of fantasy points the player you submitted the prior year scores. Bench points count.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "As an example:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "table",
+    "content": [
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Player",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Donating Team",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Winning Team",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Points Scored",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Next Year’s WE Draw Order",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Rivers",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Tadlock",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Burke",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "2.4 pts. in 2024",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Tadlock = 2nd WE pick in 2025",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Wilson",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Wetzel",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Brill",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "10.6 pts. in 2024",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Wetzel = 3rd WE pick in 2025",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Garoppolo",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Brill",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Wetzel",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "1.8 pts. in 2024",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Brill = 1st WE pick in 2025",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Mahomes",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Burke",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Tadlock",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "37 pts. in 2024",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Burke = Last (best) pick in 2025",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "At each owner’s turn, they may draw a player from the hat, or steal a player that had been drawn by a prior owner.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "No WE player may be stolen more than twice.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "8. Rosterbation",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "After weeks and weeks of meticulous preparation, days of tinkering with spreadsheet formulas, and then several hours of intense blow by blow bidding, on Saturday afternoon, PAFFL owners inevitably slide into a quiet corner somewhere... away from prying eyes... They grab a magazine, or visit their favorite website, and begin... rosterbating. Gently stroking their carefully crafted roster sheets in a haze of post-auctial bliss, owners imagine their perfect lineup and potential deals.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 1
+    },
+    "content": [
+     {
+      "text": "IV. Administration & Operations",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 1
+    },
+    "content": [
+     {
+      "text": "League Calendar",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "bulletList",
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "March 1st - The first day of every \"League Year\"",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Two weeks before Auction Weekend - Rookie Slow Draft begins",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "First Weekend in August - League Auction each year",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Saturday before Week 1 NFL Kick-Off - Roster cut-down date when rosters must conform to league rules",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Wednesday of Week 12 - PAFFL trade deadline",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Week 14 - last week of the regular PAFFL season",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Week 17 - 🎺🌤 Jankster Cup 🎺🌤",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Last day in February - last day of the PAFFL year and last day to make transactions (e.g. buy out contracts)",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "League Dues",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The league dues are $400 per owner per season.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "League dues may only be changed by a super-majority (⅔) vote of league members.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Administrative Fees",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "In addition to league dues, which fund our prize money, an additional administrative fee will be added to each member’s annual dues after the auction. This fee will be determined by dividing the sum of expenses by the number of league members. Expenses include things such as:",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "orderedList",
+    "attrs": {
+     "type": null,
+     "start": 1
+    },
+    "content": [
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Website fees",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "The league meal",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Draft house AirBnB rental",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Jankster Cup engraving",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "listItem",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "text": "Etc.",
+          "type": "text"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Prize Money",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Prize money is distributed based on playoff performance and weekly high scores throughout the season.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "table",
+    "content": [
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Trigger",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Amount",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableHeader",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Notes",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "#1 Playoff Seed",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "10%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$640",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Bye Week",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "#2 Playoff Seed",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "6%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$384",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Bye Week",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "1st Round Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "5%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$320",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Cage Match Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "1st Round Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "5%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$320",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Cage Match Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "2nd Round Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "10%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$640",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Semi-Final Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "2nd Round Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "10%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$640",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Semi-Final Winner",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Jankster Cup Champion",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "26%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$1,664",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Jankster Cup Champion",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "tableRow",
+      "content": [
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          654
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "Weekly High Score (Weeks 1 - 14)",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          222
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "2%",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": [
+          224
+         ]
+        },
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "text": "$128",
+            "type": "text"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableCell",
+        "attrs": {
+         "align": null,
+         "colspan": 1,
+         "rowspan": 1,
+         "colwidth": null
+        },
+        "content": [
+         {
+          "type": "paragraph"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Commissioner",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The league is governed by a Commissioner, who handles administrative duties, disputes and the general well-being of the league. There are no term limits for this position. However, upon request of any owner, elections can be held at any time. A simple majority vote (9 out of 16 teams) is required to elect new officials. Should a new Commissioner be elected, they enter into office on the the first day (3/1) of following next PAFFL season and hold office until voted out.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 3
+    },
+    "content": [
+     {
+      "text": "Conflicts of Interest",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The Commissioner is expected to conduct themselves with the highest ethical standards, but should their involvement in vote mediation or any other issue ever raise questions of a conflict of interest, the league may elect an emergency mediator. For example, should the Commissioner be involved in a questionable trade, the league will vote on a candidate to mediate the league discussion and help resolve the issue.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 1
+    },
+    "content": [
+     {
+      "text": "V. Rules of Order",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "The PAFFL continues to evolve & improve. New rules often are proposed and voted upon at the annual draft and winter meetings. Occasionally, loopholes and discrepancies in the league manual surface during the regular season. Team owners are obligated to report to the Commissioner any such issues with the league manual as soon as such loopholes and discrepancies are noticed. In some cases, additional rules will be drafted and ratified by a league vote immediately. All votes regarding rule changes and other issues require approval of a simple-majority vote. Changes involving league membership (e.g. expulsion), or league office (e.g. remove Commissioner), require super-majority (>⅔) vote.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "League votes that pertain to transactions require more than 50 percent of the owners’ approval and a minimum of ten (10) total owners voting. In addition teams involved in the trades are not permitted to vote on the issue. (Example, if a trade between Team A and Team B is disputed and put to a vote, Teams A and B are excluded from the vote and 8 out of 14 of the remaining teams must vote to block the trade, in order for the trade to be blocked). For a trade to be overturned, there must be a majority and no less than ten (10) total owners voting.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Votes must be completed within 48-hours of the time they are announced. If any owner is unreachable during that 48-hour period of time, his vote is counted as an abstain.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "New ideas or proposals can be submitted to the league at any time, preferably using email or the league website message board. If a minimum of two (2) additional owners, three (3) total proponents, do not support the proposal, then it won’t be considered by the league.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Any change in scoring, league divisions, contract status, roster sizes or anything that materially impacts the league, any approved changes that occur following the annual auction won’t take effect until the following season. For clarification sake, if a rule is passed during a season, that change will be implemented in the upcoming season. However if that rule is officially approved & agreed upon prior to the auction event, it will be implemented for that upcoming season unless otherwise contemplated and agreed upon prior to the vote.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "heading",
+    "attrs": {
+     "level": 2
+    },
+    "content": [
+     {
+      "text": "Ethics",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "There is a strong argument to be made that no document (including the U.S. Constitution) has been created which could govern so thoroughly and effectively that corruption could not exist within that document’s governing rules. This manual is no exception. Cheating at fantasy football, much like cheating at cards, is a fairly easy thing to do. The goal of the PAFFL is to provide a social outlet, not a cut-throat competition.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Owners are expected to conduct themselves accordingly, with high ethical standards. Owners may never knowingly take advantage of another owner, through grossly unfair trades or loopholes in this league manual (see “Rule Changes and Votes” above). This manual is a work in progress and owners are expected to draw the league’s attention to any loopholes or poorly defined sections within the manual.",
+      "type": "text"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "text": "Additionally, owners must vote on issues using their sense of fairness to all teams involved, not by simply trying to improve their individual team’s standing. For example, teams may not block a trade simply because the trade helps a rival team (the trade must be grossly unfair).",
+      "type": "text"
+     }
+    ]
+   }
+  ]
+ }
+}

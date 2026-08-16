@@ -1,0 +1,758 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------- People & teams ----------
+
+model Owner {
+  id               Int       @id @default(autoincrement())
+  name             String
+  email            String    @unique
+  phone            String?
+  isCommissioner   Boolean   @default(false)
+  active           Boolean   @default(true)
+  // Consent timestamps migrated from old site — legally load-bearing for SMS
+  privacyConsentAt DateTime?
+  touConsentAt     DateTime?
+  smsConsentAt     DateTime?
+  createdAt        DateTime  @default(now())
+
+  teamOwner      TeamOwner?
+  loginTokens    LoginToken[]
+  sessions       Session[]
+  manualVersions ManualVersion[]
+  transactions   Transaction[]
+  statusChanges  TransactionStatusLog[]
+
+  @@map("owners")
+  milestonesSet     LeagueMilestone[]
+  draftPicks        DraftPick[] @relation("DraftPicker")
+  smsReceived       SmsMessage[] @relation("SmsRecipient")
+  smsSent           SmsMessage[] @relation("SmsSender")
+  smsInbound        SmsInbound[] @relation("SmsInboundFrom")
+  consentEvents     ConsentEvent[] @relation("ConsentSubject")
+  consentActions    ConsentEvent[] @relation("ConsentActor")
+  conditionsRaised  Condition[] @relation("ConditionsRaised")
+  conditionsSettled Condition[] @relation("ConditionsSettled")
+  pageViews PageView[]
+  ruleVotesCast    RuleVote[]    @relation("RuleVoteCaster")
+  ruleCommentsMade RuleComment[] @relation("RuleCommentAuthor")
+}
+
+model Team {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  /// URL identity, derived from the team name. Stored rather than computed so
+  /// links stay valid if a team is renamed, and so an unwieldy one can be
+  /// shortened by hand. Deliberately not the owner name: teams outlive owners.
+  slug         String   @unique
+  /// Owner name(s) as displayed — "Drew & Erik". Not an
+  /// abbreviation despite the column name, and never used in URLs.
+  abbreviation String   @unique
+  logoUrl      String?
+  createdAt    DateTime @default(now())
+
+  owners       TeamOwner[]
+  rosterSpots  RosterSpot[]
+  ledgerFrom   LedgerEntry[] @relation("LedgerFrom")
+  ledgerTo     LedgerEntry[] @relation("LedgerTo")
+  ruleProposals RuleProposal[] @relation("RuleProposer")
+  ruleVotes     RuleVote[]     @relation("RuleVoter")
+  ruleComments  RuleComment[]  @relation("RuleCommenter")
+
+  @@map("teams")
+}
+
+// One owner belongs to exactly one team; a team may have many owners.
+model TeamOwner {
+  teamId  Int
+  ownerId Int   @unique
+  team    Team  @relation(fields: [teamId], references: [id])
+  owner   Owner @relation(fields: [ownerId], references: [id])
+
+  @@id([teamId, ownerId])
+  @@map("team_owners")
+}
+
+// ---------- Auth (passwordless) ----------
+
+model LoginToken {
+  id        Int       @id @default(autoincrement())
+  ownerId   Int
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  owner     Owner     @relation(fields: [ownerId], references: [id])
+
+  @@map("login_tokens")
+}
+
+model Session {
+  id         Int      @id @default(autoincrement())
+  ownerId    Int
+  tokenHash  String   @unique
+  createdAt  DateTime @default(now())
+  lastSeenAt DateTime @default(now())
+  owner      Owner    @relation(fields: [ownerId], references: [id])
+
+  @@map("sessions")
+}
+
+/*
+ * A page view by a signed-in owner.
+ *
+ * Deliberately owner-scoped: anonymous traffic here is mostly link previewers
+ * — Messages fetches every URL it sees — and counting those would make the
+ * numbers say something untrue. Recording only signed-in views answers the
+ * question actually being asked (who is using this, and what do they look at)
+ * and collects nothing at all about anyone else.
+ *
+ * No IP address and no user agent. Neither would be used, and the least
+ * interesting thing to store is the thing you never have to defend.
+ */
+model PageView {
+  id      Int      @id @default(autoincrement())
+  ownerId Int
+  path    String
+  at      DateTime @default(now())
+
+  owner Owner @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  @@index([ownerId, at])
+  @@index([path])
+  @@index([at])
+  @@map("page_views")
+}
+
+// ---------- Players & rosters ----------
+
+enum Position {
+  QB
+  RB
+  WR
+  TE
+  K
+  OTHER
+}
+
+model Player {
+  id          Int      @id @default(autoincrement()) // old-site IDs preserved on migration
+  name        String
+  position    Position
+  nflTeam     String
+  rookieYear  Int?
+  headshotUrl String?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  rosterSpots   RosterSpot[]
+  ledgerEntries LedgerEntry[]
+
+  @@unique([name, position]) // CSV upsert match key
+  @@map("players")
+  draftPicks  DraftPick[]
+  nominations  Nomination[]
+}
+
+enum RosterDesignation {
+  ACTIVE
+  IR
+  PS
+}
+
+// A player's stint on a team's roster. Rows are ended (cutAt), never deleted —
+// Phase 2's transaction ledger builds on this.
+model RosterSpot {
+  id                  Int               @id @default(autoincrement())
+  teamId              Int
+  playerId            Int
+  salary              Int
+  contractEndSeason   Int? // the displayed "Contract (yr)" — null = no long-term contract
+  contractStartSeason Int?
+  /// Which season an *uncontracted* salary belongs to.
+  ///
+  /// A player with no contract is on the roster for exactly one year, and
+  /// nothing else on the row says which. A 2025 auction win and a 2026 holdover
+  /// look identical — same null contract, same salary — and between the slow
+  /// draft and the auction clear both sit on the same roster. This is what
+  /// tells them apart, and so what decides whether the salary counts against a
+  /// given season's cap. Irrelevant when contractEndSeason is set: a contract
+  /// already says which years it covers.
+  acquiredForSeason   Int?
+  designation         RosterDesignation @default(ACTIVE)
+  /// The league year this spot's practice-squad stint belongs to.
+  ///
+  /// Set when the designation turns PS, cleared when it turns back. It exists
+  /// to answer the one question the designation alone can't: does taking him
+  /// off PS return the year (in-season activation) or keep it (the PS year
+  /// completed and the extension was earned)? Null on rows that predate the
+  /// automation — those adjust by hand, and the banner says so.
+  psSeason            Int?
+  isBackToBack        Boolean           @default(false) // 2nd 3-yr contract expiring → back to auction pool
+  notes               String?
+  acquiredAt          DateTime          @default(now())
+  cutAt               DateTime?
+
+  team   Team   @relation(fields: [teamId], references: [id])
+  player Player @relation(fields: [playerId], references: [id])
+
+  @@index([teamId, cutAt])
+  @@map("roster_spots")
+}
+
+// ---------- League manual ----------
+
+/*
+ * Versions are immutable snapshots and strictly append-only: editing publishes
+ * a new version, and "restoring" an old one copies it forward as a new version.
+ * The live manual is therefore always the highest version — no isActive flag to
+ * fall out of sync (v1 had one, and it was redundant for exactly this reason).
+ */
+model ManualVersion {
+  id        Int      @id @default(autoincrement())
+  version   Int      @unique
+  title     String   @default("MPFFL League Manual")
+  doc       Json // TipTap document — the source of truth
+  html      String // derived from doc and sanitized at save; a render cache
+  summary   String? // what changed in this version
+  authorId  Int?
+  createdAt DateTime @default(now())
+
+  author Owner? @relation(fields: [authorId], references: [id])
+
+  @@index([version])
+  @@map("manual_versions")
+}
+
+model Season {
+  year        Int       @id
+  auctionDate DateTime?
+  cutdownDate DateTime?
+
+  byeWeeks NflTeamBye[]
+
+  @@map("seasons")
+}
+
+// Bye weeks belong to the NFL team, not the player — a player's bye is derived
+// through their nflTeam, so a mid-season trade updates it automatically.
+model NflTeamBye {
+  season  Int
+  nflTeam String
+  week    Int
+
+  seasonRef Season @relation(fields: [season], references: [year], onDelete: Cascade)
+
+  @@id([season, nflTeam])
+  @@map("nfl_team_byes")
+}
+
+// ---------- Transactions & the asset ledger ----------
+
+enum TransactionType {
+  TRADE
+  WAIVER
+  CONDITIONAL_CUT
+  UNCONDITIONAL_CUT
+  ROOKIE_PICK_SELECTION
+  AUCTION_WIN // a winning bid at the August auction, recorded live from the room
+  AUCTION_CLEAR // the pre-auction roster clear: expiring players return to the pool
+  AUCTION_DECLARATION // a pre-auction holdover, declared before bidding opens
+  ALLOCATION // annual grant from the league on March 1
+  ADJUSTMENT // commissioner correction, incl. direct roster edits
+  OTHER
+}
+
+enum TransactionStatus {
+  SUBMITTED
+  APPROVED // shown as "Rosters Updated" — this is when rosters move
+  COMPLETED
+  REJECTED
+  WITHDRAWN
+}
+
+enum AssetType {
+  CAP_DOLLARS
+  ROOKIE_PICK
+  TOPPER_HOLDOVER
+  PS_SPOT
+  CONDITIONAL_CUT
+  UNCONDITIONAL_CUT
+  PLAYER
+  OTHER
+}
+
+model Transaction {
+  id      Int               @id @default(autoincrement())
+  type    TransactionType
+  status  TransactionStatus @default(SUBMITTED)
+  note    String?
+  /// Who filed it. The commissioner files on an owner's behalf ~20% of the time,
+  /// so the team it was filed *for* is tracked separately from the filer.
+  submittedByOwnerId Int?
+  submittedForTeamId Int?
+  /// Imported from v1. Seasons through the seeded opening balance are already
+  /// represented by that balance, so these entries are kept for the record but
+  /// excluded from it; later seasons still count as real future obligations.
+  isHistorical       Boolean @default(false)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  submittedBy Owner? @relation(fields: [submittedByOwnerId], references: [id])
+
+  entries    LedgerEntry[]
+  statusLogs TransactionStatusLog[]
+
+  @@index([status])
+  @@index([type])
+  @@index([createdAt])
+  @@map("transactions")
+  conditions         Condition[] @relation("ConditionOnTransaction")
+  resolvesCondition  Condition?  @relation("ConditionResolution")
+  draftPick          DraftPick? @relation("DraftSelectionTx")
+}
+
+/// The single source of truth for who owns what.
+///
+/// Append-only. Balances are never stored — they are folded from these entries
+/// on read, counting only entries whose transaction is APPROVED or COMPLETED.
+/// That is what makes moving a transaction backwards through the lifecycle safe:
+/// its entries simply stop counting, with no state to unwind.
+model LedgerEntry {
+  id            Int       @id @default(autoincrement())
+  transactionId Int
+  seasonYear    Int
+  assetType     AssetType
+
+  /// null on either side means "the league" — an allocation in, or an asset spent.
+  fromTeamId Int?
+  toTeamId   Int?
+
+  /// Dollars for CAP_DOLLARS; a count (usually 1) for everything else.
+  amount Int @default(1)
+
+  playerId Int?
+  /// Rookie picks are traded by round long before pick numbers exist.
+  round      Int?
+  pickNumber Int?
+  /// Whose pick this originally was — "Team A holds Team B's 2027 1st".
+  originTeamId Int?
+
+  label   String?
+  details Json?
+
+  /// Some trade terms depend on an outcome — "if he's on the roster in 2026,
+  /// they owe a PS spot". The entry is recorded when the trade is struck so the
+  /// obligation isn't carried in someone's memory, but it doesn't count until
+  /// resolved. v1 kept these in free text; transaction #401 sat that way for months.
+  isContingent Boolean   @default(false)
+  condition    String?
+  resolvedAt   DateTime?
+
+  transaction Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  fromTeam    Team?       @relation("LedgerFrom", fields: [fromTeamId], references: [id])
+  toTeam      Team?       @relation("LedgerTo", fields: [toTeamId], references: [id])
+  player      Player?     @relation(fields: [playerId], references: [id])
+
+  @@index([transactionId])
+  @@index([seasonYear, assetType])
+  @@index([fromTeamId])
+  @@index([toTeamId])
+  @@map("ledger_entries")
+  /// Set when a commissioner marked this entry conditional at approval.
+  conditionId Int?
+  conditionRef Condition? @relation(fields: [conditionId], references: [id])
+}
+
+model TransactionStatusLog {
+  id              Int               @id @default(autoincrement())
+  transactionId   Int
+  oldStatus       TransactionStatus?
+  newStatus       TransactionStatus
+  changedByOwnerId Int?
+  changedAt       DateTime          @default(now())
+  comment         String?
+
+  transaction Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  changedBy   Owner?      @relation(fields: [changedByOwnerId], references: [id])
+
+  @@index([transactionId])
+  @@map("transaction_status_log")
+}
+
+/// The five dates the league year turns on. Only LEAGUE_YEAR_START is a rule;
+/// the rest follow the NFL calendar and must be entered each year.
+enum MilestoneKey {
+  LEAGUE_YEAR_START
+  CONTRACT_SETTLEMENT
+  AUCTION
+  ROSTER_CUTDOWN
+  TRADE_DEADLINE
+}
+
+/// One row per season per milestone.
+///
+/// Scoping by season is what makes "cleared on March 1st" free: a new league
+/// year simply has no rows, so every milestone falls back until the
+/// commissioner sets it. No scheduled job to fail, no destructive delete, and
+/// last year's dates survive as record.
+model LeagueMilestone {
+  id           Int          @id @default(autoincrement())
+  seasonYear   Int
+  key          MilestoneKey
+  occursAt     DateTime
+  note         String?
+  setByOwnerId Int?
+  setAt        DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  setBy Owner? @relation(fields: [setByOwnerId], references: [id])
+
+  @@unique([seasonYear, key])
+  @@index([seasonYear])
+}
+
+
+/// How a condition finally settled.
+enum ConditionOutcome {
+  CONVEYED   // the assets named in the transaction convey as filed
+  NOT_MET    // nothing conveys
+  REPLACED   // something else conveys instead
+}
+
+/// A term that can't be settled when the trade is filed.
+///
+/// Captured by the commissioner at approval rather than by the owner at
+/// submission: an owner fills this form twice a year, guarding a term that
+/// matters two seasons later. Approval is the one moment someone with
+/// authority is deliberately reading the deal.
+///
+/// A condition may have no entries pointing at it — two of the three in league
+/// history were an asset that didn't exist yet, promised in prose and delivered
+/// by a separate transaction months later.
+model Condition {
+  id            Int       @id @default(autoincrement())
+  transactionId Int
+  /// The trigger, in prose. Never machine-evaluated — a human judges it.
+  description   String
+  /// When someone should know the answer. Drives the review queue.
+  decideBy      DateTime?
+  createdByOwnerId Int?
+  createdAt     DateTime  @default(now())
+
+  resolvedAt      DateTime?
+  outcome         ConditionOutcome?
+  resolutionNote  String?
+  resolvedByOwnerId Int?
+  /// The transaction generated to carry whatever conveyed, so the resolution
+  /// shows up in the feed instead of being appended silently to the original.
+  resolutionTransactionId Int? @unique
+
+  transaction            Transaction  @relation("ConditionOnTransaction", fields: [transactionId], references: [id], onDelete: Cascade)
+  resolutionTransaction  Transaction? @relation("ConditionResolution", fields: [resolutionTransactionId], references: [id])
+  createdBy Owner? @relation("ConditionsRaised", fields: [createdByOwnerId], references: [id])
+  resolvedBy Owner? @relation("ConditionsSettled", fields: [resolvedByOwnerId], references: [id])
+  entries   LedgerEntry[]
+
+  @@index([resolvedAt])
+  @@index([transactionId])
+}
+
+
+/// What a consent event is about.
+enum ConsentKind {
+  PRIVACY
+  TOU
+  SMS
+}
+
+/// How a consent change reached us. Matters for TCPA records: an inbound STOP
+/// is evidence in a way a form submission isn't.
+enum ConsentSource {
+  WEB
+  SMS_STOP
+  COMMISSIONER
+  MIGRATION
+}
+
+/// Every change to an owner's consent, kept forever.
+///
+/// The checkbox on the team page is the current state — Twilio and the TCPA
+/// require consent be revocable, so a live toggle is the interface. But a
+/// single overwritten timestamp cannot answer "when did they opt out, and
+/// how", and the privacy policy commits to keeping opt-out records for four
+/// years. So state lives on Owner and history lives here.
+model ConsentEvent {
+  id        Int           @id @default(autoincrement())
+  ownerId   Int
+  kind      ConsentKind
+  granted   Boolean
+  source    ConsentSource
+  /// Who made the change, when it wasn't the owner themselves.
+  actorOwnerId Int?
+  /// Effective date of the policy consented to, so "agreed to the Terms"
+  /// stays answerable after the Terms change.
+  policyEffective String?
+  note      String?
+  createdAt DateTime      @default(now())
+
+  owner Owner  @relation("ConsentSubject", fields: [ownerId], references: [id], onDelete: Cascade)
+  actor Owner? @relation("ConsentActor", fields: [actorOwnerId], references: [id])
+
+  @@index([ownerId, kind])
+  @@index([createdAt])
+}
+
+
+/// Every message we tried to send, whether or not it left.
+///
+/// v1 kept the equivalent and it was the only way to answer "did he actually
+/// get told?" — which comes up every draft. Failures are rows too: a message
+/// that was never sent is exactly the thing you need a record of.
+model SmsMessage {
+  id           Int      @id @default(autoincrement())
+  ownerId      Int?
+  toPhone      String
+  template     String
+  body         String
+  /// queued | sent | failed | skipped — skipped carries a reason.
+  status       String
+  reason       String?
+  twilioSid    String?
+  errorCode    String?
+  /// True when SMS_TEST_MODE diverted this away from the real recipient.
+  testMode     Boolean  @default(false)
+  triggerType  String
+  triggerData  Json?
+  sentByOwnerId Int?
+  createdAt    DateTime @default(now())
+
+  owner  Owner? @relation("SmsRecipient", fields: [ownerId], references: [id])
+  sentBy Owner? @relation("SmsSender", fields: [sentByOwnerId], references: [id])
+
+  @@index([ownerId, createdAt])
+  @@index([createdAt])
+}
+
+/// Inbound texts. STOP is handled; everything else is forwarded and kept.
+model SmsInbound {
+  id        Int      @id @default(autoincrement())
+  fromPhone String
+  body      String
+  ownerId   Int?
+  twilioSid String?  @unique
+  handledAs String   // stop | start | forwarded
+  createdAt DateTime @default(now())
+
+  owner Owner? @relation("SmsInboundFrom", fields: [ownerId], references: [id])
+
+  @@index([createdAt])
+}
+
+
+/// What a rookie costs to hold over, by where they were picked and what they play.
+///
+/// A complete grid — every pick, every position — because a missing cell is a
+/// draft that stops. The numbers don't change year to year, but they're data
+/// rather than code so that when they do, nobody needs a deploy.
+///
+/// This is the *only* copy. The manual's live table reads it too: a second
+/// table of the same numbers is a second answer waiting to disagree, which is
+/// the failure this architecture exists to prevent.
+model HoldoverRate {
+  id         Int      @id @default(autoincrement())
+  pickNumber Int
+  position   String
+  amount     Int
+  updatedAt  DateTime @updatedAt
+
+  @@unique([pickNumber, position])
+  @@index([pickNumber])
+}
+
+
+/// What the commissioner set up for a year's slow draft.
+model DraftConfig {
+  seasonYear   Int      @id
+  startsAt     DateTime?
+  /// Minutes a team has once their window opens.
+  pickWindow   Int      @default(720)
+  startedAt    DateTime?
+  completedAt  DateTime?
+  updatedAt    DateTime @updatedAt
+
+  @@map("draft_configs")
+}
+
+/// How a pick was used.
+enum DraftSelection {
+  HOLDOVER  // the rookie joins the roster at the holdover rate
+  TOP       // the team keeps a right to top this player at the auction
+}
+
+/// One slot in the draft.
+///
+/// Deliberately does *not* store which team holds the pick. That comes from
+/// deriveAssets, so a trade — including one made mid-window — moves the board
+/// with no reconciliation. v1 stored the holder and had to keep it in step.
+///
+/// A row exists only once its window opens, so the board is the derived order
+/// left-joined onto these.
+model DraftPick {
+  id           Int             @id @default(autoincrement())
+  seasonYear   Int
+  /// Overall slot, 1..32. Round is derived from it.
+  slot         Int
+  openedAt     DateTime        @default(now())
+
+  playerId     Int?
+  selection    DraftSelection?
+  holdoverAmount Int?
+  pickedAt     DateTime?
+  pickedByOwnerId Int?
+  /// Set when a commissioner picked for someone who was unreachable.
+  onBehalf     Boolean         @default(false)
+  transactionId Int?           @unique
+
+  /// Windows open on a page load, so the texts go out on a page load too.
+  /// These two make that safe: whoever loads the board next sends nothing that
+  /// has already been sent.
+  openNotifiedAt DateTime?
+  reminderSentAt DateTime?
+
+  player      Player?      @relation(fields: [playerId], references: [id])
+  pickedBy    Owner?       @relation("DraftPicker", fields: [pickedByOwnerId], references: [id])
+  transaction Transaction? @relation("DraftSelectionTx", fields: [transactionId], references: [id])
+
+  @@unique([seasonYear, slot])
+  /// A player, once taken, is gone from every other open slot — and with
+  /// several windows open at once that race is real, not theoretical. Postgres
+  /// treats NULLs as distinct, so unpicked slots don't collide.
+  @@unique([seasonYear, playerId])
+  @@index([seasonYear, pickedAt])
+  @@map("draft_picks")
+}
+
+
+
+model Nomination {
+  id         Int       @id @default(autoincrement())
+  seasonYear Int
+  playerId   Int
+  openedAt   DateTime  @default(now())
+  closedAt   DateTime?
+
+  player Player @relation(fields: [playerId], references: [id])
+
+  @@index([seasonYear, closedAt])
+  @@map("nominations")
+}
+
+/// of how decisions got made.
+
+/// The My Team tab's rolling assessment. Rows accumulate; newest wins.
+
+/// §20.10: one row per lineup slot — his hand-curated targets and note.
+/// Every other cell of the lineup-plan table derives from the ledger, the
+/// board, and his bets.
+
+// ---------- Rules voting (§22) ----------
+
+enum RuleVoteChoice {
+  AYE
+  NAY
+  ABSTAIN
+}
+
+/// Declared by the commissioner after lock — the tally informs, the
+/// commissioner rules. Never computed.
+enum RuleOutcome {
+  PASSED
+  FAILED
+  WITHDRAWN
+}
+
+/// One row per season's ballot: the lock. Votes are rejected server-side
+/// once locksAt passes; comments never close.
+model RuleSlate {
+  seasonYear Int       @id
+  locksAt    DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@map("rule_slates")
+}
+
+model RuleProposal {
+  id               Int          @id @default(autoincrement())
+  seasonYear       Int
+  title            String
+  body             String
+  /// Ballot order within the season.
+  displayOrder     Int          @default(0)
+  /// Attribution — the league flavor. Team optional (historical rows may
+  /// carry only a name); label shown verbatim.
+  proposedByTeamId Int?
+  proposedByLabel  String
+  iconUrl          String?
+  proposedAt       DateTime     @default(now())
+  outcome          RuleOutcome?
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  proposedByTeam Team?         @relation("RuleProposer", fields: [proposedByTeamId], references: [id])
+  votes          RuleVote[]
+  comments       RuleComment[]
+
+  @@index([seasonYear, displayOrder])
+  @@map("rule_proposals")
+}
+
+/// THE team's vote — one per proposal per team, cast by whichever co-owner
+/// got there first, changeable by any co-owner until the slate locks.
+model RuleVote {
+  id            Int            @id @default(autoincrement())
+  proposalId    Int
+  teamId        Int
+  choice        RuleVoteChoice
+  castByOwnerId Int
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  proposal RuleProposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+  team     Team         @relation("RuleVoter", fields: [teamId], references: [id])
+  castBy   Owner        @relation("RuleVoteCaster", fields: [castByOwnerId], references: [id])
+
+  @@unique([proposalId, teamId])
+  @@index([teamId])
+  @@map("rule_votes")
+}
+
+/// Threaded one visible level (parentId → a top-level comment). Soft-deleted
+/// to "[removed]" so threads keep their shape; conversations never close.
+model RuleComment {
+  id            Int       @id @default(autoincrement())
+  proposalId    Int
+  parentId      Int?
+  teamId        Int
+  authorOwnerId Int
+  body          String
+  deletedAt     DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  proposal RuleProposal  @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+  parent   RuleComment?  @relation("RuleCommentThread", fields: [parentId], references: [id])
+  replies  RuleComment[] @relation("RuleCommentThread")
+  team     Team          @relation("RuleCommenter", fields: [teamId], references: [id])
+  author   Owner         @relation("RuleCommentAuthor", fields: [authorOwnerId], references: [id])
+
+  @@index([proposalId, createdAt])
+  @@map("rule_comments")
+}

@@ -1,0 +1,377 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * MPFFL design tokens — ported from v1 (shadcn semantic scheme, HSL).
+ * The site is dark by default (v1 locked dark mode); the .dark class is set
+ * on <html> in the root layout. Light values kept for a future theme toggle.
+ */
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(222.2 84% 4.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222.2 84% 4.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222.2 84% 4.9%);
+  --primary: hsl(222.2 47.4% 11.2%);
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 96%);
+  --secondary-foreground: hsl(222.2 84% 4.9%);
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(210 40% 96%);
+  --accent-foreground: hsl(222.2 84% 4.9%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --success: hsl(142 71% 29%);
+  --success-foreground: hsl(210 40% 98%);
+  --warning: hsl(32 95% 44%);
+  --warning-foreground: hsl(210 40% 98%);
+  --attention: hsl(24.6 95% 53.1%); /* v1's orange (Rules Vote nav, hot items) */
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(222.2 84% 4.9%);
+  --radius: 0.5rem;
+
+  /* League status colors (IR / PS / B2B markers from v1 rosters) */
+  --ir: hsl(221 83% 53%);
+  --ps: hsl(142 64% 24%);
+  --b2b: hsl(0 72% 51%);
+}
+
+.dark {
+  --background: hsl(0 0% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(0 0% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(0 0% 9%);
+  --secondary: hsl(0 0% 14.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 14.9%);
+  --muted-foreground: hsl(0 0% 63.9%);
+  --accent: hsl(0 0% 14.9%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 50%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --success: hsl(142 71% 45%);
+  --success-foreground: hsl(144 61% 10%);
+  --warning: hsl(32 95% 54%);
+  --warning-foreground: hsl(26 83% 14%);
+  --attention: hsl(24.6 95% 53.1%);
+  --border: hsl(0 0% 14.9%);
+  --input: hsl(0 0% 14.9%);
+  --ring: hsl(0 0% 83.1%);
+
+  --ir: hsl(217 91% 60%);
+  --ps: hsl(142 69% 45%);
+  --b2b: hsl(0 91% 60%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-attention: var(--attention);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ir: var(--ir);
+  --color-ps: var(--ps);
+  --color-b2b: var(--b2b);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/*
+ * Rendered manual content. The document is authored in a rich-text editor and
+ * stored as sanitized HTML, so these styles target bare tags rather than
+ * classes. Scoped to .manual-prose so they can't leak into the app's own UI.
+ */
+.manual-prose {
+  line-height: 1.7;
+}
+.manual-prose > * + * {
+  margin-top: 1em;
+}
+.manual-prose h1,
+.manual-prose h2,
+.manual-prose h3,
+.manual-prose h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 5rem; /* clears the fixed header when jumping to an anchor */
+}
+.manual-prose h1 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.manual-prose h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.manual-prose h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+.manual-prose h1:first-child,
+.manual-prose h2:first-child {
+  margin-top: 0;
+}
+.manual-prose p {
+  color: var(--foreground);
+}
+.manual-prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.manual-prose ul,
+.manual-prose ol {
+  padding-left: 1.5rem;
+}
+.manual-prose ul {
+  list-style: disc;
+}
+.manual-prose ol {
+  list-style: decimal;
+}
+.manual-prose li + li {
+  margin-top: 0.3rem;
+}
+.manual-prose li p {
+  margin: 0;
+}
+.manual-prose strong {
+  font-weight: 700;
+}
+.manual-prose em {
+  font-style: italic;
+}
+.manual-prose u {
+  text-decoration: underline;
+}
+.manual-prose blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted-foreground);
+}
+.manual-prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.manual-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.manual-prose th,
+.manual-prose td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+.manual-prose th {
+  background: var(--muted);
+  font-weight: 600;
+}
+/* Wide tables scroll on their own rather than pushing the page sideways. */
+.manual-prose .table-scroll {
+  overflow-x: auto;
+  /* Contain the scroll here so it can never become a page-wide sideways drag. */
+  max-width: 100%;
+}
+
+/*
+ * The editor writes inline `min-width` on tables it thinks are wide. Inside a
+ * scroller that's fine and even useful — but the table must be allowed to be
+ * narrower than the viewport when it can be, or every phone gets a horizontal
+ * scrollbar on tables that would have fitted.
+ */
+.manual-prose .table-scroll > table {
+  min-width: auto !important;
+  width: max-content;
+  max-width: none;
+}
+
+@media (min-width: 640px) {
+  .manual-prose .table-scroll > table {
+    width: 100%;
+  }
+}
+
+/*
+ * Print: real text, real pagination. v1 rasterized the page with html2canvas,
+ * which produced an unselectable screenshot and shipped ~300KB of JS.
+ */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    padding-top: 0 !important;
+    max-width: none !important;
+  }
+  .manual-prose {
+    font-size: 11pt;
+  }
+  .manual-prose a {
+    color: #000 !important;
+  }
+  .manual-prose h1,
+  .manual-prose h2,
+  .manual-prose h3 {
+    break-after: avoid;
+    color: #000 !important;
+  }
+  .manual-prose img,
+  .manual-prose table,
+  .manual-prose li {
+    break-inside: avoid;
+  }
+  .manual-prose th {
+    background: #eee !important;
+  }
+  .manual-prose *,
+  .manual-prose {
+    border-color: #999 !important;
+  }
+}
+
+/*
+ * Confetti — a burst, not a fall.
+ *
+ * Two animations per piece, because one wasn't enough to read as celebration.
+ * The outer element carries the trajectory: thrown outward from a point, an
+ * apex, then falling away as it fades. The inner one tumbles independently and
+ * much faster, flipping end over end the way a real piece of confetti does —
+ * that flip is most of what sells it.
+ *
+ * Each piece gets its own angle, distance, arc and tumble speed as custom
+ * properties, so one pair of keyframes drives sixty different paths.
+ */
+@keyframes confetti-burst {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.2);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(
+        calc(-50% + var(--confetti-x, 0px)),
+        calc(-50% + var(--confetti-y, 0px)),
+        0
+      )
+      scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(
+        calc(-50% + var(--confetti-x, 0px) * 1.25),
+        calc(-50% + var(--confetti-y, 0px) + var(--confetti-drop, 300px)),
+        0
+      )
+      scale(0.85);
+    opacity: 0;
+  }
+}
+
+/*
+ * End over end. The scaleX squeeze through zero is the piece turning edge-on,
+ * which is what makes a flat shape look like it's spinning in three dimensions
+ * rather than rotating on the page.
+ */
+@keyframes confetti-tumble {
+  0% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  25% {
+    transform: rotate(180deg) scaleX(0.15);
+  }
+  50% {
+    transform: rotate(360deg) scaleX(-1);
+  }
+  75% {
+    transform: rotate(540deg) scaleX(0.15);
+  }
+  100% {
+    transform: rotate(720deg) scaleX(1);
+  }
+}
+
+.animate-confetti-burst {
+  animation-name: confetti-burst;
+  /* Fast out of the gate, then coasting — the shape of something thrown. */
+  animation-timing-function: cubic-bezier(0.12, 0.75, 0.28, 1);
+  animation-fill-mode: both;
+}
+
+.animate-confetti-tumble {
+  animation-name: confetti-tumble;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
