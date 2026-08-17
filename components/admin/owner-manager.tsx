@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { UserPlus } from "lucide-react";
+import { UserPlus, ShieldPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,7 @@ import {
   detachOwner,
   setOwnerActive,
 } from "@/lib/actions/owner-actions";
+import { createTeam } from "@/lib/actions/team-actions";
 
 /*
  * Owners, and which team they belong to.
@@ -161,6 +162,58 @@ function OwnerLine({ owner, teams }: { owner: OwnerRow; teams: TeamRow[] }) {
   );
 }
 
+function AddTeam() {
+  const { pending, error, run } = useAction();
+  const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [abbreviation, setAbbreviation] = useState("");
+
+  if (!open) {
+    return (
+      <Button variant="outline" size="lg" onClick={() => setOpen(true)}>
+        <ShieldPlus /> Add a Team
+      </Button>
+    );
+  }
+
+  return (
+    <SettingCard
+      title="Add a team"
+      description="Just the team itself — add an owner to it below once it exists."
+    >
+      <FormRow>
+        <FormField id="add-team-name" label="Team name" className="w-56">
+          <Input value={name} onChange={(e) => setName(e.target.value)} />
+        </FormField>
+        <FormField
+          id="add-team-abbreviation"
+          label="Owner name(s), as displayed"
+          hint='e.g. "Drew & Erik" — shown next to the team name everywhere.'
+          className="w-56"
+        >
+          <Input value={abbreviation} onChange={(e) => setAbbreviation(e.target.value)} />
+        </FormField>
+      </FormRow>
+      <div className="flex flex-wrap items-center gap-2">
+        <Button size="sm" loading={pending} disabled={pending || !name || !abbreviation}
+          onClick={() =>
+            run(async () => {
+              const res = await createTeam({ name, abbreviation });
+              if (res.ok) {
+                setName(""); setAbbreviation(""); setOpen(false);
+              }
+              return res;
+            })
+          }>
+          Add
+        </Button>
+        <Button size="sm" variant="ghost" onClick={() => setOpen(false)}>Cancel</Button>
+      </div>
+      {error && <p className="text-sm text-destructive">{error}</p>}
+    </SettingCard>
+  );
+}
+
 function AddOwner({ teams }: { teams: TeamRow[] }) {
   const { pending, error, run } = useAction();
   const [open, setOpen] = useState(false);
@@ -237,7 +290,10 @@ export function OwnerManager({
 }) {
   return (
     <div className="space-y-5">
-      <AddOwner teams={teams} />
+      <div className="flex flex-wrap gap-2">
+        <AddTeam />
+        <AddOwner teams={teams} />
+      </div>
 
       <section className="space-y-2">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">

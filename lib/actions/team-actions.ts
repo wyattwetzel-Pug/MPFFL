@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
-import { getSessionOwner } from "@/lib/auth";
+import { getSessionOwner, requireCommissioner } from "@/lib/auth";
 import { normalisePhone } from "@/lib/phone";
 import type { ConsentKind, ConsentSource } from "@prisma/client";
 
@@ -152,6 +152,15 @@ export async function updateOwnerEmail(input: {
   return { ok: true, email };
 }
 
+/** Shared by create and rename, so a team's URL is derived one way, always. */
+function teamSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 /**
  * Rename a team.
  *
@@ -169,11 +178,7 @@ export async function renameTeam(
     return { ok: false, error: "You can only rename your own team." };
   if (!name.trim()) return { ok: false, error: "A team needs a name." };
 
-  const slug = name
-    .toLowerCase()
-    .replace(/['’]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
+  const slug = teamSlug(name);
   if (!slug) return { ok: false, error: "That name has no letters or numbers in it." };
 
   const clash = await prisma.team.findFirst({ where: { slug, NOT: { id: teamId } } });
@@ -184,4 +189,43 @@ export async function renameTeam(
   revalidatePath("/teams", "layout");
   revalidatePath("/rosters");
   return { ok: true, slug };
+}
+
+/**
+ * Create a new team.
+ *
+ * `abbreviation` is misleadingly named — it's the "Drew & Erik"-style owner
+ * label shown next to the team name everywhere, not a short code. Nothing
+ * else can set it later, so it's required at creation rather than left as a
+ * TODO on a live roster.
+ */
+export async function createTeam(input: {
+  name: string;
+  abbreviation: string;
+}): Promise<{ ok: true; teamId: number; slug: string } | { ok: false; error: string }> {
+  await requireCommissioner();
+
+  const name = input.name.trim();
+  const abbreviation = input.abbreviation.trim();
+  if (!name) return { ok: false, error: "A team needs a name." };
+  if (!abbreviation) return { ok: false, error: "Enter the owner name(s) to display." };
+
+  const slug = teamSlug(name);
+  if (!slug) return { ok: false, error: "That name has no letters or numbers in it." };
+
+  const [nameClash, slugClash, abbrClash] = await Promise.all([
+    prisma.team.findFirst({ where: { name } }),
+    prisma.team.findFirst({ where: { slug } }),
+    prisma.team.findFirst({ where: { abbreviation } }),
+  ]);
+  if (nameClash) return { ok: false, error: "A team with that name already exists." };
+  if (slugClash) return { ok: false, error: "Another team's name maps to the same URL." };
+  if (abbrClash) return { ok: false, error: "Another team already uses that owner label." };
+
+  const team = await prisma.team.create({ data: { name, slug, abbreviation } });
+
+  revalidatePath("/admin/owners");
+  revalidatePath("/teams", "layout");
+  revalidatePath("/rosters");
+  return { ok: true, teamId: team.id, slug: team.slug };
 }
