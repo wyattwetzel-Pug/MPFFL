@@ -12,7 +12,7 @@ const FOOTER_LINKS: { title: string; href: string; external?: boolean }[] = [
   { title: "Rosters", href: "/rosters" },
   { title: "Transactions", href: "/transactions" },
   { title: "Manual", href: "/manual" },
-  { title: "CBS", href: "https://mpfflog.football.cbssports.com/home", external: true },
+  { title: "ESPN", href: "https://fantasy.espn.com/football/league?leagueId=1865381540", external: true },
   { title: "Privacy", href: "/privacy" },
   { title: "Terms", href: "/tou" },
 ];
@@ -21,7 +21,7 @@ export async function SiteFooter() {
   const owner = await getSessionOwner();
   const links = owner
     ? FOOTER_LINKS.flatMap((l) =>
-        l.title === "CBS" ? [l, { title: "AI Connector", href: "/mcp" }] : [l]
+        l.title === "ESPN" ? [l, { title: "AI Connector", href: "/mcp" }] : [l]
       )
     : FOOTER_LINKS;
   return (

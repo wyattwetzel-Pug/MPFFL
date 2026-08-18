@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { title: "Auction", href: "/auction" },
   { title: "Transactions", href: "/transactions" },
   { title: "Manual", href: "/manual" },
-  { title: "CBS", href: "https://mpfflog.football.cbssports.com/home" },
+  { title: "ESPN", href: "https://fantasy.espn.com/football/league?leagueId=1865381540" },
 ];
 
 export async function SiteHeader() {
