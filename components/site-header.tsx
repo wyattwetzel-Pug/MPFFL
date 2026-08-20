@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { title: "Rookie Draft", href: "/draft" },
   { title: "Auction", href: "/auction" },
   { title: "Transactions", href: "/transactions" },
+  { title: "Legacy", href: "/legacy" },
   { title: "Manual", href: "/manual" },
   { title: "ESPN", href: "https://fantasy.espn.com/football/league?leagueId=1865381540" },
 ];

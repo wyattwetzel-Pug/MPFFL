@@ -11,6 +11,7 @@ const FOOTER_LINKS: { title: string; href: string; external?: boolean }[] = [
   { title: "Home", href: "/" },
   { title: "Rosters", href: "/rosters" },
   { title: "Transactions", href: "/transactions" },
+  { title: "Legacy", href: "/legacy" },
   { title: "Manual", href: "/manual" },
   { title: "ESPN", href: "https://fantasy.espn.com/football/league?leagueId=1865381540", external: true },
   { title: "Privacy", href: "/privacy" },
