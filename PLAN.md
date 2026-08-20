@@ -18,6 +18,16 @@ Each row's team name links to `/teams/[slug]`; rows were matched to current
 teams by owner name (e.g. "Ludda" → Ludvig Nordland → Buuls) since two
 historically separate rows (Lucca K, Griffen) now share one merged team.
 
+## 2026-08-20 — Legacy standings made commissioner-editable
+Moved legacy standings from the static file into a `LegacyStanding` table
+(`prisma/schema.prisma`), seeded once from the original data
+(`scripts/seed-legacy-standings.ts`). The commissioner can now edit every
+field — including which team a row links to — directly on `/legacy`; cells
+save on blur, same as holdover rates and team settings, since a correction
+to a historical record is a setting, not a transaction. It's still not a
+ledger derivation: nothing here is computed, it's just no longer hardcoded
+in source.
+
 ## Next
 - [ ] Launch (SETUP.md)
 - [ ] Enter teams, owners, players, rosters

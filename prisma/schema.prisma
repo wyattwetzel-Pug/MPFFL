@@ -63,6 +63,7 @@ model Team {
   ruleProposals RuleProposal[] @relation("RuleProposer")
   ruleVotes     RuleVote[]     @relation("RuleVoter")
   ruleComments  RuleComment[]  @relation("RuleCommenter")
+  legacyStandings LegacyStanding[]
 
   @@map("teams")
 }
@@ -755,4 +756,36 @@ model RuleComment {
 
   @@index([proposalId, createdAt])
   @@map("rule_comments")
+}
+
+/// All-time standings inherited from the parent league, frozen at the fork.
+/// A one-time snapshot, not a ledger derivation — this history predates the
+/// ledger and nothing here should ever be computed from it. `label` is the
+/// name as it appeared back then, which can differ from the team's current
+/// name; `teamId` is what makes the row link to a roster today. Editable by
+/// the commissioner since it's a record of the past, not a live transaction.
+model LegacyStanding {
+  id                    Int     @id @default(autoincrement())
+  teamId                Int
+  label                 String
+  wins                  Int
+  losses                Int
+  winPct                String
+  pointsScored          String
+  pointsAgainst         String
+  highestScorerSeasons  Int?
+  playoffAppearances    Int?
+  playoffRecord         String?
+  oneSeedAppearances    Int?
+  titleAppearances      Int?
+  titleWins             Int?
+  bpotya                Int?
+  coty                  Int?
+  sortOrder             Int     @default(0)
+  updatedAt             DateTime @updatedAt
+
+  team Team @relation(fields: [teamId], references: [id])
+
+  @@index([sortOrder])
+  @@map("legacy_standings")
 }

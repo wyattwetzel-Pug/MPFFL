@@ -1,76 +1,59 @@
 import type { Metadata } from "next";
+import { prisma } from "@/lib/prisma";
+import { getSessionOwner } from "@/lib/auth";
 import { PageHeader } from "@/components/ui/page-header";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { TextLink } from "@/components/ui/text-link";
-import { legacyStandings } from "@/lib/legacy/standings";
+import { LegacyStandingsTable } from "@/components/legacy/legacy-standings-table";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Legacy",
   description: "All-time MPFFL standings carried over from the parent league.",
 };
 
-const dash = <span className="text-muted-foreground">–</span>;
+export default async function LegacyPage() {
+  const [owner, standings, teams] = await Promise.all([
+    getSessionOwner(),
+    prisma.legacyStanding.findMany({ orderBy: { sortOrder: "asc" } }),
+    prisma.team.findMany({ orderBy: { name: "asc" }, select: { id: true, name: true, slug: true } }),
+  ]);
 
-export default function LegacyPage() {
+  const editable = owner?.isCommissioner ?? false;
+
   return (
     <div className="space-y-6">
       <PageHeader title="Legacy" />
       <p className="text-sm text-muted-foreground">
         All-time standings from the parent league, frozen at the fork.
+        {editable && " Cells save as you leave them."}
       </p>
 
       <Card>
         <CardContent className="p-0">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Team</TableHead>
-                <TableHead className="text-center">W</TableHead>
-                <TableHead className="text-center">L</TableHead>
-                <TableHead className="text-center">Win %</TableHead>
-                <TableHead className="text-center">PF</TableHead>
-                <TableHead className="text-center">PA</TableHead>
-                <TableHead className="text-center">Scoring Titles</TableHead>
-                <TableHead className="text-center">Playoff Apps</TableHead>
-                <TableHead className="text-center">Playoff Record</TableHead>
-                <TableHead className="text-center">1 Seeds</TableHead>
-                <TableHead className="text-center">Title Apps</TableHead>
-                <TableHead className="text-center">Titles</TableHead>
-                <TableHead className="text-center">BPOTYA</TableHead>
-                <TableHead className="text-center">COTY</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {legacyStandings.map((row) => (
-                <TableRow key={`${row.team}-${row.slug}`}>
-                  <TableCell className="font-medium">
-                    <TextLink href={`/teams/${row.slug}`}>{row.team}</TextLink>
-                  </TableCell>
-                  <TableCell className="text-center">{row.wins}</TableCell>
-                  <TableCell className="text-center">{row.losses}</TableCell>
-                  <TableCell className="text-center">{row.winPct}</TableCell>
-                  <TableCell className="text-center">{row.pointsScored}</TableCell>
-                  <TableCell className="text-center">{row.pointsAgainst}</TableCell>
-                  <TableCell className="text-center">{row.highestScorerSeasons ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.playoffAppearances ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.playoffRecord ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.oneSeedAppearances ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.titleAppearances ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.titleWins ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.bpotya ?? dash}</TableCell>
-                  <TableCell className="text-center">{row.coty ?? dash}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+          <LegacyStandingsTable
+            rows={standings.map((s) => ({
+              id: s.id,
+              teamId: s.teamId,
+              slug: teams.find((t) => t.id === s.teamId)?.slug ?? "",
+              label: s.label,
+              wins: s.wins,
+              losses: s.losses,
+              winPct: s.winPct,
+              pointsScored: s.pointsScored,
+              pointsAgainst: s.pointsAgainst,
+              highestScorerSeasons: s.highestScorerSeasons,
+              playoffAppearances: s.playoffAppearances,
+              playoffRecord: s.playoffRecord,
+              oneSeedAppearances: s.oneSeedAppearances,
+              titleAppearances: s.titleAppearances,
+              titleWins: s.titleWins,
+              bpotya: s.bpotya,
+              coty: s.coty,
+            }))}
+            teams={teams}
+            editable={editable}
+          />
         </CardContent>
       </Card>
     </div>
